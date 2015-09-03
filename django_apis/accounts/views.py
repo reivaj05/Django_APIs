@@ -10,9 +10,10 @@ class ProfileView(LoginRequiredMixin, DetailView):
 
         def get_object(self, queryset=None):
             authentication_user = self.request.user
-            return UserProfile.objects.get(
+            user, created = UserProfile.objects.get_or_create(
                 authentication_user=authentication_user
             )
+            return user
 
         def get_context_data(self, **kwargs):
             context = super(ProfileView, self).get_context_data(**kwargs)
