@@ -24,6 +24,7 @@ ALL_AUTH_APPS = (
     'allauth.socialaccount.providers.linkedin',
     'allauth.socialaccount.providers.spotify',
     'allauth.socialaccount.providers.twitter',
+    'allauth.socialaccount.providers.google',
 )
 
 PROJECT_APPS = (
