@@ -7,9 +7,7 @@
         <div class="container">
             <h1>{% trans "Welcome!" %}</h1>
             <p>{% trans "Django project to retrieve user profile information from different social APIs!!" %}</p>
-            {% comment %}
-            <p><a class="btn btn-primary btn-lg" href="{% url 'accounts:create_user_profile' %}" role="button">{% trans "Register" %}</a></p>
-            {% endcomment %}
+            <p><a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}" role="button">{% trans "Register" %}</a></p>
         </div><!-- container -->
     </div><!-- jumbotron -->
 </div><!-- container -->
