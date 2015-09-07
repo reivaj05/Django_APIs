@@ -54,7 +54,7 @@ class TestUserProfileDetailView(TestCase):
         request.user = self.user.authentication_user
         response = UserProfileDetailView.as_view()(request)
         context_user_profile = response.context_data['user_profile']
-        context_user_accounts = response.context_data['user_accounts']
+        # context_user_accounts = response.context_data['user_accounts']
         self.assertEqual(
             self.user,
             context_user_profile,
