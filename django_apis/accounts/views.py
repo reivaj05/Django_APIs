@@ -4,7 +4,7 @@ from .models import UserProfile
 # Create your views here.
 
 
-class ProfileView(LoginRequiredMixin, DetailView):
+class UserProfileDetailView(LoginRequiredMixin, DetailView):
         template_name = 'account/profile.html'
         context_object_name = 'user_profile'
 
@@ -16,7 +16,7 @@ class ProfileView(LoginRequiredMixin, DetailView):
             return user
 
         def get_context_data(self, **kwargs):
-            context = super(ProfileView, self).get_context_data(**kwargs)
+            context = super(UserProfileDetailView, self).get_context_data(**kwargs)
             user = self.request.user
             context['user_accounts'] = user.socialaccount_set.all()
             return context
